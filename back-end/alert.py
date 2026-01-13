@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-def track_daily():
+def track_daily(): # tracking if devo completed or not
     week_devos = np.array([True, False, True, True, True, False, False])
     print(week_devos)
     missed_devos = []

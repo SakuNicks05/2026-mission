@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import requests
 
-def encourage_func():
+def encourage_func(): # encouragment phrases for devo completion
     encouragement_array = np.array(["Well done for showing up today—faithfulness matters",
                                     "That time you set aside wasn’t small; it was meaningful",
                                     "You chose presence over pressure today. That counts",
@@ -29,7 +29,7 @@ def encourage_func():
 
 # encourage_func()
 
-def daily_verse():
+def daily_verse(): # retrieves daily verse
     url = "https://beta.ourmanna.com/api/v1/get/?format=json"
     try:
         source = requests.get(url)
