@@ -53,3 +53,100 @@ TO DO IN FUTURE:
 - security
 - fun quizzes
 - optional notifications
+
+
+
+
+
+
+
+
+
+PAGES NEEDED:
+
+ASSUMING THAT THEY'RE IN YROCK - MEMBER
+
+LOADING ENTRY: ***************************************************
+1. loading screen
+2. log in/sign up
+3. sync with Bible App (optional)
+
+SURVEY: ****************************************************
+1. season of life
+2. ideal times for devo
+3. ideal times for prayer time
+4. times and days of SWC
+5. times and days of lifegroup
+6. times and days of gatherings/meetings
+7. name of mentor (if you've been given one)
+8. color of spirit
+
+PAGE - WORD AND VERSE ABOUT THE GREAT COMMISSION
+
+DASHBOARD: *************************************************
+- "spirit" at the center
+- daily verse for the Great Commission
++ event icon at top left (notifs everytime there's a new event)
+      - can be expanded and added to calendar
++ SOS 
+      - AI prompt on the issue
+      - Bible verse
+      - mentor
+      - church leaders
+1. "spirit" status
+2. streaks/status in devo, SWC, gatherings, prayer time (calendar and status summary) (can be clicked for further analysis)
+3. daily challenge (can be checked off)
+4. weekly challenge (can be checked off)
+5. miracle of the day
+
+CHURCH LIFE: **************************************************
+1. calendar with all events
+2. add button for meetings/gatherings
+- time start and end, date, place
+
+DEVOTIONAL LIFE: ***************************************************
+1. suggest a devo for me 
+2. (if voluntary devo) what did you read for devo/s today
+3. takeaway from devo/s for the day (journal of sorts)
+4. "dive deeper" option
+      - suggests more verses/chapters
+      - player plan for verse/chapter suggested
+      - commentaries 
+
+BIBLE: ****************************************************
+1. version
+2. look for book
+3. look for chapter
+- can highlight, see commentary, save verse into a page
+
+PRAYER LIFE: ****************************************************
+1. prayer requests
+2. answered prayers
+3. miracles of [YEAR]
+
+MISSION: *****************************************************
+1. plans for family, school, friends, church, people that the Lord placed in your life
+2. AI to help in assessing feasibility in projects, gives suggestions, guides with verses all tailored to their season and plans
+
+NOTIFICATIONS NEEDED: ********************************************************
+- verse/s throughout the day
+- notifcation for upcoming event (SWC, LCC, LG, gathering)
+- devo time
+- prayer time
+- alert if threshold is breached (spirit is hungry/thirsty)
+- encouragement to keep running the race if week streak has been reached
+
+WIDGETS NEEDED: ********************************************************
+
+ALL ARE OPTIONAL AND CAN BE ADDED OR REMOVED:
+- notifs of upcoming events
+- verse of the day
+- daily challenge
+- weekly challenge
+
+AI NEEDED:
+- setting off alert if threshold is breached
+- encouragement if user accomplishes streak
+- SOS AI on the issue
+- verse given daily
+- AI for mission planning (feasibility checking, suggestions, organization, verse corroboration)
