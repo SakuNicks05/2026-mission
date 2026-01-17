@@ -23,19 +23,6 @@ cursor.execute("""
     )
 """)
 
-username = input("Enter your username: ")
-email = input("Enter your email: ")
-password = input("Enter your password: ")
-
-cursor.execute("""
-    INSERT INTO users (username, email, password)
-    VALUES (?, ?, ?)
-""", (username, email, password))
-
-connection.commit()
-connection.close()
-print("User added successfully!")
-
 # checking if username is taken
 # checking if email is valid
 # requirements for password
@@ -52,4 +39,81 @@ def show_table():
     for row in table:
         print(row)
 
-show_table()
+def search_user():
+    conn = sqlite3.connect("../database/zion.db")
+    cur = conn.cursor()
+
+    find_user = input("Enter username to search: ")
+
+    cur.execute(
+        "SELECT * FROM users WHERE username = ?",
+        (find_user,)
+    )
+
+    user = cur.fetchone()
+
+    if user:
+        print("User found in database.")
+    else:
+        print("User not found.")
+
+def check_password(password):
+    pass
+
+def add_user():
+    connection = sqlite3.connect("../database/zion.db")
+    cursor = connection.cursor()
+
+    choice = input("Search or Add a user (S/A): ")
+    
+    if choice == "A":
+        while True:
+            username = input("Enter your username: ")
+
+            cursor.execute(
+                "SELECT * FROM users WHERE username = ?",
+                (username,)
+            )
+            found_user = cursor.fetchone()
+
+            if found_user:
+                print("Username is already taken. Try another username.")
+            elif not found_user:
+                break
+            else:
+                print("Invalid.")
+
+        email = input("Enter your email: ")
+        password = input("Enter your password: ")
+
+        check_password(password)
+
+        cursor.execute("""
+            INSERT INTO users (username, email, password)
+            VALUES (?, ?, ?)
+        """, (username, email, password))
+
+        connection.commit()
+        connection.close()
+        print("User added successfully!")
+        show_table()
+    elif choice == "S":
+        search_user()
+        show_table()
+    else:
+        print("Invalid. Try again.")
+
+def delete_table():
+    connection = sqlite3.connect("../database/zion.db")
+    cursor = connection.cursor()
+
+    cursor.execute("DELETE FROM users")
+    cursor.execute("DELETE FROM sqlite_sequence WHERE name='users'")
+
+    connection.commit()
+    connection.close()
+
+    show_table()
+    print("Table deleted!")
+
+add_user()
