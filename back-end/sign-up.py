@@ -3,7 +3,6 @@ import pandas as pd
 import json
 import os
 import re
-import mysql.connector
 import sqlite3
 
 DB_DIR = "../database"
