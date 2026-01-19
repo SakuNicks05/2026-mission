@@ -56,4 +56,11 @@ def make_acc():
     print("All requirements are satisfied.")
 
 
-make_acc()
+def user_in_pass():
+    name = input("Enter name: ")
+    password = input("Enter password: ")
+
+    if name in password:
+        print("Password denied! Username is in the password.")
+    else:
+        print("Password accepted!")
