@@ -9,7 +9,8 @@ def testing():
     connection = sqlite3.connect("../database/zion.db")
     cursor = connection.cursor()
 
-    username = "mary"
+    print("LOG IN: \n")
+    username = input("Enter username: ")
 
     search_query = """
         SELECT id, username, password
