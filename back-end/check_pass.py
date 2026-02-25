@@ -14,24 +14,6 @@ def make_acc():
     else:
         print("Password length requirements met.")
 
-    # checks for upper case
-    # for char in password:
-    #     if char.isupper():
-    #         print("There is an upper case.")
-    #         break
-    #     else:
-    #         print("Missing upper case.")
-    #         break
-    
-    # # checks for lower case
-    # for char in password:
-    #     if char.islower():
-    #         print("There is a lower case.")
-    #         break
-    #     else:
-    #         print("Missing lower case.")
-    #         break
-
     miss_lower = any(not char.islower() for char in password)
     miss_upper = any(not char.isupper() for char in password)
     has_space = any(char.isspace() for char in password)
