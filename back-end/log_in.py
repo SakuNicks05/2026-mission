@@ -40,39 +40,45 @@ def testing():
     connection = sqlite3.connect("../database/zion.db")
     cursor = connection.cursor()
 
-    print("LOG IN: \n")
+    # prints database
+    print("Database: \n")
+    cursor.execute("SELECT * FROM users")
+    table = cursor.fetchall()
+    for row in table:
+        print(row)
+
+    print("\nLOG IN: \n")
     username = input("Enter username: ")
-    password = input("Enter username: ")
+    # checks if username exists in database
+        # if not, warns that user doesn't exist
 
-    user_pass = """
-        SELECT password
-        FROM users
-        WHERE password = ?
-    """
-
-    user_id = """
-        SELECT id
+    user_details = """
+        SELECT id, username, password
         FROM users
         WHERE username = ?
     """
 
-    cursor.execute(search_query, (username,))
+    cursor.execute(user_details, (username,))
     user_match = cursor.fetchone()
 
-    if user_match:
-        print(f"Details of {username}:\n")
-        print(f"ID: {user_match[0]}\n")
-        print(f"NAME: {user_match[1]}\n")
-        print(f"PASSWORD: {user_match[2]}\n")
+    user_id = user_match[0]
+    user_name = user_match[1]
+    user_pass = user_match[2]
 
-    print("Database: \n")
-    cursor.execute("SELECT * FROM users")
-    table = cursor.fetchall()
-    
-    for row in table:
-        print(row)
+    password = input("Enter password: ")
 
-testing()
+    if password == user_pass:
+        print("Credentials match. Logging in.")
+    else:
+        print("Wrong credentials. Try again.")
+
+    # if user_match:
+    #     print(f"Details of {username}:\n")
+    #     print(f"ID: {user_match[0]}\n")
+    #     print(f"NAME: {user_match[1]}\n")
+    #     print(f"PASSWORD: {user_match[2]}\n")
+
+
 def log_in():
     connection = sqlite3.connect("../database/zion.db")
     cursor = connection.cursor()
@@ -110,4 +116,4 @@ def log_in():
 
     print("Logged in successfully!")
 
-log_in()
+testing()
