@@ -65,7 +65,6 @@ def testing():
         print(f"NAME: {user_match[1]}\n")
         print(f"PASSWORD: {user_match[2]}\n")
 
-<<<<<<< HEAD
     print("Database: \n")
     cursor.execute("SELECT * FROM users")
     table = cursor.fetchall()
@@ -74,7 +73,6 @@ def testing():
         print(row)
 
 testing()
-=======
 def log_in():
     connection = sqlite3.connect("../database/zion.db")
     cursor = connection.cursor()
@@ -113,4 +111,3 @@ def log_in():
     print("Logged in successfully!")
 
 log_in()
->>>>>>> 4436dd896b75cd1961bb6066021d2253214e47ba
