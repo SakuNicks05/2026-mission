@@ -11,9 +11,16 @@ def testing():
 
     print("LOG IN: \n")
     username = input("Enter username: ")
+    password = input("Enter username: ")
 
-    search_query = """
-        SELECT id, username, password
+    user_pass = """
+        SELECT password
+        FROM users
+        WHERE password = ?
+    """
+
+    user_id = """
+        SELECT id
         FROM users
         WHERE username = ?
     """
@@ -26,5 +33,12 @@ def testing():
         print(f"ID: {user_match[0]}\n")
         print(f"NAME: {user_match[1]}\n")
         print(f"PASSWORD: {user_match[2]}\n")
+
+    print("Database: \n")
+    cursor.execute("SELECT * FROM users")
+    table = cursor.fetchall()
+    
+    for row in table:
+        print(row)
 
 testing()
